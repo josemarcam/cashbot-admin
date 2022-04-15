@@ -1,0 +1,13 @@
+version: "3"
+networks:
+    core:
+        external: true
+services:
+    001-service-catalog:
+        container_name: 001-service-catalog
+        build: ./
+        ports:
+            - "8005:8000"
+        command: python runserver.py
+        networks:
+            - core
