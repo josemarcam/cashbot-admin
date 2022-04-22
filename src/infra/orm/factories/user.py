@@ -11,11 +11,11 @@ class UserFactory(alchemy.SQLAlchemyModelFactory):
         sqlalchemy_session = db.get_scopped_session()
 
     name = Faker('company', locale='pt_BR')
-    mac = "fefjioreofi"
+    mac = Faker('md5')
     email = Faker('ascii_company_email')
     cpf = "39990139822"
     password = Faker('md5')
     balance = Faker('random_element', elements=[10, 5])
-    key = "nao temos key ainda"
-    teste = "nap"
-    validity = "sei la"
+    key = Faker('md5')
+    teste = Faker('md5')
+    validity = Faker('md5')
